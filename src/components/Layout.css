@@ -1,0 +1,157 @@
+.outer-container {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    padding: 1rem;
+}
+
+.details h1 {
+    margin: 1rem 0;
+}
+
+.details h2 {
+    margin: 1rem 0;
+}
+
+.details button {
+    background-color: #fff;
+    cursor: pointer;
+    margin: 1rem 1rem;
+}
+
+.details button:hover {
+    background-color: red;
+}
+
+.grid-wrapper {
+    margin-right: 1rem;
+}
+
+.back-btn {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.difficulty-container {
+    display: flex;
+    margin: 1rem;
+}
+
+.restart-btn {
+    display: block;
+    width: 50%;
+    padding: 1rem 0;
+}
+
+.easy-btn.active,
+.medium-btn.active,
+.hard-btn.active {
+    background-color: red;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.alert-container {
+    display: none;
+}
+
+.alert-container.active {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    background-color: darkred;
+}
+
+.alert-container img {
+    width: 300px;
+    height: auto;
+    margin: 1rem 0;
+}
+
+.alert-container.active .game-end-text {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+.alert-container.active button {
+    display: block;
+    width: 30%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.alert-container.active button:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+@media screen and (max-width: 1024px){
+    .outer-container{
+        flex-direction: column;
+        grid-gap: 0;
+        justify-content: start;
+    }
+    .details {
+        height: 40%;
+    }
+    .easy-btn.active,
+    .medium-btn.active,
+    .hard-btn.active,
+    .details button,
+    .restart-btn {
+    padding: 0.5rem 0;
+    margin: 0;
+    }
+
+    .difficulty-container {
+        margin: 0.5rem;
+    }
+
+    .details h1,
+    .details h2 {
+    margin: 0.3rem;
+    }
+    .grid-wrapper {
+        margin: 0;
+    }
+}
